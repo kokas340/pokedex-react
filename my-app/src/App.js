@@ -1,14 +1,16 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import PokemonDetails from './pages/PokemonDetails';
+import Pokemon from './pages/Pokemon';
+import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/pokemon/:id" element={<PokemonDetails />} /> 
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/pokemon/:id" element={<Pokemon />} /> 
       </Routes>
     </Router>
   );
