@@ -1,4 +1,4 @@
-# Pokedex
+# Pokedex - Assignment 2 
 
 ## Description
 
