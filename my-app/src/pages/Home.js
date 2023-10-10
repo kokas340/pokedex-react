@@ -1,8 +1,13 @@
 import React from 'react'
-import PokemonList from '../components/PokemonList '
+import PokemonList from '../components/PokemonList'
+import Navbar from '../components/Navbar'
 function Home() {
   return (
-   <PokemonList/>
+    <>
+      <Navbar />
+      <PokemonList />
+    </>
+
   )
 }
 
