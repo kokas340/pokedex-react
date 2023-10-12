@@ -28,26 +28,27 @@ const PokemonDetails = () => {
   }
 
   return (
-    <div>
+    <div className="pokemon-container">
       <h2>{pokemonData.name}</h2>
       <img
         src={pokemonData.sprites.front_default}
         alt={pokemonData.name}
+        className="pokemon-image"
       />
       <h3>Abilities:</h3>
-      <ul>
+      <ul className="pokemon-list">
         {pokemonData.abilities.map((ability, index) => (
           <li key={index}>{ability.ability.name}</li>
         ))}
       </ul>
       <h3>Types:</h3>
-      <ul>
+      <ul className="pokemon-list">
         {pokemonData.types.map((type, index) => (
           <li key={index}>{type.type.name}</li>
         ))}
       </ul>
       <h3>Stats:</h3>
-      <ul>
+      <ul className="pokemon-list">
         {pokemonData.stats.map((stat, index) => (
           <li key={index}>
             {stat.stat.name}: {stat.base_stat}
@@ -55,7 +56,7 @@ const PokemonDetails = () => {
         ))}
       </ul>
       <h3>Moves:</h3>
-      <ul>
+      <ul className="pokemon-list">
         {pokemonData.moves.slice(0, 5).map((move, index) => (
           <li key={index}>{move.move.name}</li>
         ))}

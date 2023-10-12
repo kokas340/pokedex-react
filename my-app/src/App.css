@@ -10,7 +10,8 @@ body {
   margin-left: 30px;
   margin-right: 30px;
   background-color: #eaeaea;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   display: flex;
   flex-wrap: wrap; 
   justify-content: center; 
@@ -27,7 +28,10 @@ body {
   text-align: center;
 }
 .pokemon-item:hover {
-  color: #2202ef; 
+  background-color: #b8b8b8; 
+}
+.pokemon-item:hover div {
+  background-color: #b8b8b8; 
 }
 
 .pokemon-item img {
@@ -72,3 +76,78 @@ body {
 .nav-links li a:hover {
   color: #61dafb; 
 }
+/*Pokemon*/
+
+.pokemon-container {
+  
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.pokemon-image {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  display: block;
+}
+
+.pokemon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pokemon-list li {
+  margin: 5px 0;
+}
+
+/*pagination*/
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  margin-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 30px;
+
+}
+
+.button-container button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-container button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+.button-container button:disabled {
+  background-color: #cccccc; /* Grey */
+  cursor: not-allowed;
+}
+
+/*About*/
+.about-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+

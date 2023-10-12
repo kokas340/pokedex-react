@@ -4,7 +4,9 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div>Contact</div>
+      <div>
+      <h2>Random contact page</h2>    
+     </div>
     </>
  
   )

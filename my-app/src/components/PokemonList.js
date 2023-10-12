@@ -32,37 +32,43 @@ function PokemonList() {
 
 
   return (
-    <div className="pokemon-list-container">
-      <div>
-        <button onClick={handlePrevPage} disabled={currentPage <= 1}>
-          Prev Page
-        </button>
-      </div>
-      {pokemonData.map((pokemon) => (
-        <Link
-          to={`/pokemon/${pokemon.url.split('/')[6]}`}
-          key={pokemon.name}
-          className="pokemon-item"
-        >
-          <div key={pokemon.name} className="pokemon-item">
-            <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/')[6]}.png`}
-              alt={pokemon.name}
-            />
-            <div className="pokemon-details">
-              <h2>{pokemon.name}</h2>
-              <p>ID: {pokemon.url.split('/')[6]}</p>
+    <>
+
+      <div className="pokemon-list-container">
+        {pokemonData.map((pokemon) => (
+          <Link
+            to={`/pokemon/${pokemon.url.split('/')[6]}`}
+            key={pokemon.name}
+            className="pokemon-item"
+          >
+            <div key={pokemon.name} className="pokemon-item">
+              <img
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/')[6]}.png`}
+                alt={pokemon.name}
+              />
+              <div className="pokemon-details">
+                <h2>{pokemon.name}</h2>
+                <p>ID: {pokemon.url.split('/')[6]}</p>
+              </div>
             </div>
-          </div>
-        </Link>
-      ))}
-      {/*pagination*/}
-      <div>
-        <button onClick={handleNextPage} disabled={currentPage >= totalPages}>
-          Next Page
-        </button>
+          </Link>
+        ))}
+       
       </div>
-    </div>
+      <div className="button-container">
+        <div>
+          <button onClick={handlePrevPage} disabled={currentPage <= 1}>
+            Prev Page
+          </button>
+        </div>
+        <div>
+          <button onClick={handleNextPage} disabled={currentPage >= totalPages}>
+            Next Page
+          </button>
+        </div>
+      </div>
+
+    </>
   );
 }
 
