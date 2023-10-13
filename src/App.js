@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Pokemon from './pages/Pokemon';
 import Contact from './pages/Contact';
+
 function App() {
   return (
     <Router basename='/pokedex-react' >

@@ -1,18 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../App.css';
+
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo">Pokédex</div>
         <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          {/* Use Link components for navigation */}
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
     </nav>
   );
 }
 
-export default Navbar
+export default Navbar;
